@@ -6,6 +6,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 
 import Main from './Main';
 import Quiz from './Quiz';
+import Result from './Result';
 
 ////////------------react routes-----------------
   const router = createBrowserRouter([
@@ -19,7 +20,7 @@ import Quiz from './Quiz';
     },
     {
       path :'/result',
-      element : <div>result element</div>
+      element :<Result></Result>
     }
   ])
 
