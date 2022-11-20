@@ -1,0 +1,71 @@
+
+
+
+/* ------------------- variable for style --------------------- */
+
+.container{
+    display: block;
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 4%;
+    
+}
+.title{
+    text-align: center;
+    color: antiquewhite;
+    /* margin-top: 3%; */
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 0;
+    background-color: black;
+
+}
+.container ol{
+    padding: 3rem 0 0 1.5rem;
+
+}
+.container ol li{
+    font-size: 1.1em;
+    color: #cecece;
+    
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+
+}
+
+.start .btn{
+    padding: .4em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1em;
+    color: #202020;
+    text-decoration: none;
+    background-color: #faff5a;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+
+}
+
+ .userid{
+    padding: .7em 1em;
+    width: 40%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1em;
+    background-color: #cecece;
+    
+}
+
+input::placeholder{
+    color: black;
+}
