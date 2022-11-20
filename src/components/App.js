@@ -5,6 +5,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 ////////------------import component-----------------
 
 import Main from './Main';
+import Quiz from './Quiz';
 
 ////////------------react routes-----------------
   const router = createBrowserRouter([
@@ -14,7 +15,7 @@ import Main from './Main';
     },
     {
       path :'/quiz',
-      element : <div>quize element</div>
+      element : <Quiz></Quiz>
     },
     {
       path :'/result',
