@@ -5,7 +5,7 @@ const Questions = () => {
 
     const [checked,setChecked] = useState(undefined)
     const question = data[0];
-    console.log(question);
+    // console.log(question);
     useEffect(()=>{
 
         // console.log(data)

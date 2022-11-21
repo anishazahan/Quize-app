@@ -141,6 +141,14 @@ input::placeholder{
 .q-list li{
     margin-left: 1rem;
     margin-top: 1rem;
+    position: relative;
+}
+.q-list li::after{
+    position: absolute;
+   content: '';
+   border: 1px solid rgba(221, 221, 221, 0.048);
+   width: 50%;
+   margin-top: 10px;
 }
 .questions__heading{
     color: var(--light-color);
