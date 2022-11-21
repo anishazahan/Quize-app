@@ -148,7 +148,7 @@ input::placeholder{
     margin-bottom: 1rem;
 }
 .q-option{
-    color: var(--primary-color);
+    color: var(--light-color);
     padding: 1rem .5rem;
 }
 input[type='radio']:after {
@@ -177,6 +177,9 @@ input[type='radio']:checked:after {
     display: inline-block;
     visibility: visible;
     border: 1px solid white;
+}
+input[type='radio']:checked ~ .q-option{
+    color: var(--primary-color)!important;
 }
 
 
