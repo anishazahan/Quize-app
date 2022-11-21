@@ -133,19 +133,20 @@ input::placeholder{
 
 
 .questions{
-    margin: 2rem 1.5rem;
+    margin: 2rem 0 4rem 1.5rem;
 }
 .q-list{
     list-style: none;
 }
 .q-list li{
     margin-left: 1rem;
+    margin-top: 1rem;
 }
 .questions__heading{
     color: var(--light-color);
     font-size: 19px;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 .q-option{
     color: var(--light-color);

@@ -5,6 +5,7 @@ const Questions = () => {
 
     const [checked,setChecked] = useState(undefined)
     const question = data[0];
+    console.log(question);
     useEffect(()=>{
 
         // console.log(data)
@@ -15,20 +16,25 @@ const Questions = () => {
     }
   return (
     <div className='questions'>
-        <h2 className='questions__heading'>Simple question 1</h2>
+        <h2 className='questions__heading'>{question.question}</h2>
         <ul key={question.id} className='q-list'>
-            <li>
-                <input 
-                type="radio"
-                value={false}
-                name="options"
-                id='q1-option'
-                onChange={onselect}
-                
-                />
-                <label className='q-option' htmlFor="q1-option">Option</label>
-                <div className="check checked"></div>
-            </li>
+            {
+                question.options.map((q,i) => {
+                   return <li key={i}>
+                        <input 
+                        type="radio"
+                        value={false}
+                        name="options"
+                        id={`q${i}.options`}
+                        onChange={onselect}
+                        
+                        />
+                        <label className='q-option' htmlFor={`q${i}.options`}>{q}</label>
+                        <div className="check checked"></div>
+                  </li>
+                })
+            }
+            
         </ul>
 
     </div>
