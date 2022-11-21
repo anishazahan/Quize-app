@@ -104,6 +104,7 @@ input::placeholder{
 .grid{
     display: flex;
     justify-content: space-between;
+    
 }
 
 .prev{
@@ -125,6 +126,57 @@ input::placeholder{
     text-decoration: none;
     background-color: var(--primary-color);
 
+}
+
+
+/* ------------------- question component  style --------------------- */
+
+
+.questions{
+    margin: 2rem 1.5rem;
+}
+.q-list{
+    list-style: none;
+}
+.q-list li{
+    margin-left: 1rem;
+}
+.questions__heading{
+    color: var(--light-color);
+    font-size: 19px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.q-option{
+    color: var(--primary-color);
+    padding: 1rem .5rem;
+}
+input[type='radio']:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1a1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #893292;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid white;
 }
 
 

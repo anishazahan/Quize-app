@@ -10,7 +10,7 @@ const Questions = () => {
   return (
     <div className='questions'>
         <h2 className='questions__heading'>Simple question 1</h2>
-        <ul>
+        <ul className='q-list'>
             <li>
                 <input 
                 type="radio"
@@ -20,6 +20,8 @@ const Questions = () => {
                 onChange={onselect}
                 
                 />
+                <label className='q-option' htmlFor="q1-option">Option</label>
+                <div className="check checked"></div>
             </li>
         </ul>
 
