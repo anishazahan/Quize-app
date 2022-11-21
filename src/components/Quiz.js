@@ -6,7 +6,7 @@ const Quiz = () => {
     console.log("next")
   }
   function onPrev (){
-    console.log("next")
+    console.log("prev")
   }
 
   return (
