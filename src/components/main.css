@@ -1,7 +1,35 @@
 
+/* ------------------- Google font--------------------- */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ------------------- Browser reset code --------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,html{
+    height: 100%;
+    background: var(--dark-color);
+}
 
 /* ------------------- variable for style --------------------- */
+
+:root{
+    --primary-color:#00ff92;
+    --dark-color:#222222d6;
+    --light-color:#f0f0f0;
+}
+
+
+
+
+/* -------------------main.js style --------------------- */
 
 .container{
     display: block;
@@ -22,7 +50,7 @@
 
 }
 .container ol{
-    padding: 3rem 0 0 1.5rem;
+    padding: 3rem 0 1rem 1.5rem;
 
 }
 .container ol li{
@@ -45,7 +73,7 @@
     font-size: 1em;
     color: #202020;
     text-decoration: none;
-    background-color: #faff5a;
+    background-color: khaki;
 }
 
 #form{
@@ -68,4 +96,47 @@
 
 input::placeholder{
     color: black;
+}
+
+
+
+/* ------------------- quiz component  style --------------------- */
+.grid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prev{
+    padding: .4em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1em;
+    color: #202020;
+    text-decoration: none;
+    background-color: khaki;
+
+}
+.next{
+    padding: .4em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1em;
+    color: black;
+    text-decoration: none;
+    background-color: var(--primary-color);
+
+}
+
+
+
+/* ------------------- media query  style --------------------- */
+
+@media (max-width:768px){
+    .userid{
+        width: 80%; 
+    }
+    .container ol{
+        margin: 0 1rem;
+    }
+
 }
