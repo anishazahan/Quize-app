@@ -34,7 +34,7 @@ body,html{
 .container{
     display: block;
     position: relative;
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     padding-top: 4%;
     
@@ -47,6 +47,7 @@ body,html{
     font-size: 20px;
     padding: 15px 0;
     background-color: black;
+    border: 1px solid var(--primary-color);
 
 }
 .container ol{
@@ -190,6 +191,30 @@ input[type='radio']:checked:after {
 input[type='radio']:checked ~ .q-option{
     color: var(--primary-color)!important;
 }
+
+
+/* -------------------result.js style --------------------- */
+
+.result{
+    border: 1px solid var(--primary-color);
+    margin: 1rem 0;
+    padding: 2.5rem;
+    color: var(--light-color);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
+
 
 
 
