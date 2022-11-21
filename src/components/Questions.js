@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import data from '../database/data'
 
 const Questions = () => {
 
     const [checked,setChecked] = useState(undefined)
+    const question = data[0];
+    useEffect(()=>{
+
+        // console.log(data)
+    },[])
     function onselect(){
         setChecked(true)
-        console.log("radio btn change");
+        // console.log("radio btn change");
     }
   return (
     <div className='questions'>
         <h2 className='questions__heading'>Simple question 1</h2>
-        <ul className='q-list'>
+        <ul key={question.id} className='q-list'>
             <li>
                 <input 
                 type="radio"
