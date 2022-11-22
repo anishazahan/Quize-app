@@ -8,9 +8,9 @@ const Quiz = () => {
 
   //....redux store import......
 
- const {questions} = useSelector(state => state )
+ const state = useSelector(state => state )
   useEffect (()=>{
-    console.log(questions.queue);
+    console.log(state);
   },[])
 
   // ............next and prev button event handler .....
