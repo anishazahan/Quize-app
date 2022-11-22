@@ -26,7 +26,11 @@ const Quiz = () => {
     //----update the trace value by one using MoveNextAction--------
     if(trace < queue.length){
       dispatch(MoveNextQuestion());
+
+     //---inset new reult in the array- 
+     if(result.length <= trace ){
       dispatch(PushAnswer(check));
+     }
     }
     
   }
