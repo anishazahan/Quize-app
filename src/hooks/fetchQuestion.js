@@ -42,3 +42,14 @@ export const useFetchQuestion = () => {
    },[dispatch]);
    return [getData,setgetData];
 }
+
+
+//------moveAction Dispatch function
+export const MoveNextQuestion = ()=>{
+    try {
+        
+        
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -6,9 +6,7 @@ import {useSelector} from 'react-redux'
 
 const Quiz = () => {
 
-
-
- const state = useSelector(state => state )
+ const state = useSelector(state => state.Questions.trace )
   useEffect (()=>{
     // console.log(state);
   },[])
