@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux'
 
 const Quiz = () => {
 
-  //....redux store import......
+
 
  const state = useSelector(state => state )
   useEffect (()=>{
