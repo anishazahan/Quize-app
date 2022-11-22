@@ -1,13 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './main.css'
 import Questions from './Questions'
 import {useSelector,useDispatch} from 'react-redux'
-import { MoveNextQuestion } from '../hooks/fetchQuestion'
+import { MoveNextQuestion,MovePrevQuestion } from '../hooks/fetchQuestion'
+import { PushAnswer } from '../hooks/setResult'
+
+
 const Quiz = () => {
-const state = useSelector (state => state)
- const {queue, trace } = useSelector(state => state.questions.trace )
+
+  const [check,setChecked] = useState([]);
+
+ const state = useSelector(state => state )
+ const { queue,trace} = useSelector(state => state.questions )
  const dispatch = useDispatch();
- 
+
   useEffect (()=>{
     console.log(state);
   },[])
@@ -15,19 +21,31 @@ const state = useSelector (state => state)
   // ............next and prev button event handler .....
 
   function onNext (){
-    console.log("state")
+    console.log("next")
     //----update the trace value by one using MoveNextAction--------
-    dispatch(MoveNextQuestion());
+    // if(trace < queue.length){
+    //   dispatch(MoveNextQuestion());
+    //   // dispatch(PushAnswer(check));
+    // }
+    
   }
   function onPrev (){
     console.log("prev")
+    if(trace > 0){
+      dispatch(MovePrevQuestion());
+    }
+  }
+
+  function onChecked(check){
+      console.log(check);
+      setChecked(check)
   }
 
   return (
     <div className='container'>
           <h1 className='title text-light'>Quiz Application</h1>
 
-          <Questions></Questions>
+          <Questions onChecked={onChecked}></Questions>
           {/* ----------------display question------------------ */}
           <div className="grid">
             <button onClick={onPrev} className='btn prev'>Prev</button>

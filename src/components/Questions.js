@@ -7,7 +7,7 @@ import { useFetchQuestion } from '../hooks/fetchQuestion'
 
 
 
-const Questions = () => {
+const Questions = ({onChecked}) => {
 
     const [checked,setChecked] = useState(undefined)
    const [{isloading, apiData, serverError},setgetData]= useFetchQuestion()
@@ -25,9 +25,10 @@ const Questions = () => {
     },[])
 
 
-    function onselect(){
-        setChecked(true)
-        // console.log("radio btn change");
+    function onselect(i){
+        // setChecked(true)
+        // console.log(i);
+        onChecked(i)
     }
 
 if(isloading)return <h3 className='loading'>Loading</h3>
@@ -47,7 +48,7 @@ if(serverError)return <h3 className='loading'>{serverError ||"unknown error"}</h
                         value={false}
                         name="options"
                         id={`q${i}.options`}
-                        onChange={onselect}
+                        onChange={()=>onselect(i)}
                         
                         />
                         <label className='q-option' htmlFor={`q${i}.options`}>{q}</label>
