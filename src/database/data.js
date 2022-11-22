@@ -10,7 +10,7 @@ const data = [
     },
     {
             id:2,
-            question:"Following method can be used to display data in some form",
+            question:"Following method can be used to display data in some form using javascript",
             options : [
                 'document.write()',
                 'console.log()',
