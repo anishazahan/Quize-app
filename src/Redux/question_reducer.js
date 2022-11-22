@@ -29,6 +29,13 @@ export  const questionReducer = createSlice({
                 trace : state.trace - 1,
 
             }
+        },
+        resetAllAction : ()=>{
+            return{
+                queue :[],
+                answer :[],
+                trace :0
+            }
         }
     }
 })
