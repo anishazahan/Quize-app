@@ -45,9 +45,9 @@ export const useFetchQuestion = () => {
 
 
 //------moveAction Dispatch function
-export const MoveNextQuestion = ()=>{
+export const MoveNextQuestion = ()=>  async (dispatch)=>{
     try {
-        
+        dispatch(Action.moveNextAction())
         
     } catch (error) {
         console.log(error)

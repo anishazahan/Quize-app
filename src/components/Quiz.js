@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import { useLinkClickHandler } from 'react-router-dom'
 import './main.css'
 import Questions from './Questions'
-import {useSelector} from 'react-redux'
-
+import {useSelector,useDispatch} from 'react-redux'
+import { MoveNextQuestion } from '../hooks/fetchQuestion'
 const Quiz = () => {
 
  const state = useSelector(state => state.Questions.trace )
+
+ const dispatch = useDispatch();
   useEffect (()=>{
     // console.log(state);
   },[])
@@ -14,6 +15,8 @@ const Quiz = () => {
   // ............next and prev button event handler .....
   function onNext (){
     console.log("next")
+    //----update the trace value by one using MoveNextAction--------
+    dispatch(MoveNextQuestion);
   }
   function onPrev (){
     console.log("prev")
