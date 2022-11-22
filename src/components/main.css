@@ -206,6 +206,16 @@ input[type='radio']:checked ~ .q-option{
     justify-content: space-between;
     margin: 1rem 0;
 }
+.restart-btn{
+    padding: .4em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1em;
+    color: #202020;
+    text-decoration: none;
+    background-color: khaki;
+
+}
 
 
 

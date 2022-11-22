@@ -1,7 +1,11 @@
 import React from 'react'
 import './main.css'
+import { Link } from 'react-router-dom'
 
 const Result = () => {
+  function onRestart (){
+    console.log("restart")
+  }
   return (
     <div className='container'>
        <h1 className='title text-light'>Quiz Result</h1>
@@ -30,6 +34,10 @@ const Result = () => {
       <span>Quiz Result :</span>
       <span className='bold'>Passed</span>
     </div>
+    </div>
+
+    <div className="start">
+      <Link className='restart-btn' to={"/"} onClick={ onRestart} >Restart </Link>
     </div>
     </div>
   )
