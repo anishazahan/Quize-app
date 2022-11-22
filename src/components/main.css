@@ -229,20 +229,29 @@ table{
     margin: auto;
 }
 .table-row{
-    
+   
     margin: 3rem 0;
     
 }
 .table-row td{
     padding: 0 2rem;
     color: var(--light-color);
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.716);
 }
-.table-head{
-    border-bottom: 1px solid #ddd;
+.table-body{
+   
 }
 .result-Table{
     margin-bottom: 5%;
+}
+.table-body td{
+    padding: 1rem 2rem;
+    color: var(--light-color);
+    text-align: center;
+    
+    
 }
 
 
