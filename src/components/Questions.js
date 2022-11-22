@@ -4,7 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 
 //........custom hook.........
 import { useFetchQuestion } from '../hooks/fetchQuestion'
-import { updateResultAction } from '../Redux/resultReducer'
+import { updateResult } from '../hooks/setResult'
+
+
+
 
 
 
@@ -18,12 +21,13 @@ const Questions = ({onChecked}) => {
    
     const questions = useSelector(state => state.questions.queue[state.questions.trace] )
     const {trace} = useSelector(state =>state.questions )
+    const result = useSelector(state =>state.result.result )
   
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        dispatch(updateResultAction({trace,checked}))
-    },[dispatch])
+     dispatch(updateResult({trace,checked}))
+    },[checked])
 
 
     function onselect(i){
@@ -31,6 +35,7 @@ const Questions = ({onChecked}) => {
         // console.log(i);
         onChecked(i)
         setChecked(i)
+        dispatch(updateResult({trace,checked}))
     }
 
 if(isloading)return <h3 className='loading'>Loading</h3>
@@ -54,7 +59,7 @@ if(serverError)return <h3 className='loading'>{serverError ||"unknown error"}</h
                         
                         />
                         <label className='q-option' htmlFor={`q${i}.options`}>{q}</label>
-                        <div className="check checked"></div>
+                        <div className={`check ${result[true] == i ? 'checked' : ''}`}></div>
                   </li>
                 })
             }

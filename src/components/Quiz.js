@@ -27,7 +27,7 @@ const Quiz = () => {
     if(trace < queue.length){
       dispatch(MoveNextQuestion());
 
-     //---inset new reult in the array- 
+     //---inset new result in the array- 
      if(result.length <= trace ){
       dispatch(PushAnswer(check));
      }
@@ -60,7 +60,9 @@ const Quiz = () => {
           <Questions onChecked={onChecked}></Questions>
           {/* ----------------display question------------------ */}
           <div className="grid">
-            <button onClick={onPrev} className='btn prev'>Prev</button>
+           {
+            trace > 0 ?  <button onClick={onPrev} className='btn prev'>Prev</button> : <div></div>
+           }
             <button onClick={onNext} className='btn next'>Next</button>
           </div>
 
