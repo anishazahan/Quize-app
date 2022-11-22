@@ -13,8 +13,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body,html{
-    height: 100%;
+body{
+   
     background: var(--dark-color);
 }
 
@@ -216,10 +216,34 @@ input[type='radio']:checked ~ .q-option{
     background-color: khaki;
 
 }
+.start{
+    margin-bottom: 2rem;
+}
+
+/* -------------------resultTable.js style --------------------- */
 
 
-
-
+table{
+    border: 1px solid var(--primary-color);
+    padding: 2.5rem;
+    margin: auto;
+}
+.table-row{
+    
+    margin: 3rem 0;
+    
+}
+.table-row td{
+    padding: 0 2rem;
+    color: var(--light-color);
+    font-weight: 500;
+}
+.table-head{
+    border-bottom: 1px solid #ddd;
+}
+.result-Table{
+    margin-bottom: 5%;
+}
 
 
 

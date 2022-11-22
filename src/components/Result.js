@@ -1,6 +1,7 @@
 import React from 'react'
 import './main.css'
 import { Link } from 'react-router-dom'
+import ResultTable from './ResultTable'
 
 const Result = () => {
   function onRestart (){
@@ -39,6 +40,8 @@ const Result = () => {
     <div className="start">
       <Link className='restart-btn' to={"/"} onClick={ onRestart} >Restart </Link>
     </div>
+
+    <ResultTable></ResultTable>
     </div>
   )
 }
