@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLinkClickHandler } from 'react-router-dom'
 import './main.css'
 import Questions from './Questions'
+import {useSelector} from 'react-redux'
 
 const Quiz = () => {
+
+  //....redux store import......
+
+ const {questions} = useSelector(state => state )
+  useEffect (()=>{
+    console.log(questions.queue);
+  },[])
+
+  // ............next and prev button event handler .....
   function onNext (){
     console.log("next")
   }
