@@ -4,19 +4,20 @@ import Questions from './Questions'
 import {useSelector,useDispatch} from 'react-redux'
 import { MoveNextQuestion } from '../hooks/fetchQuestion'
 const Quiz = () => {
-
- const state = useSelector(state => state.Questions.trace )
-
+const state = useSelector (state => state)
+ const {queue, trace } = useSelector(state => state.questions.trace )
  const dispatch = useDispatch();
+ 
   useEffect (()=>{
-    // console.log(state);
+    console.log(state);
   },[])
 
   // ............next and prev button event handler .....
+
   function onNext (){
-    console.log("next")
+    console.log("state")
     //----update the trace value by one using MoveNextAction--------
-    dispatch(MoveNextQuestion);
+    dispatch(MoveNextQuestion());
   }
   function onPrev (){
     console.log("prev")
