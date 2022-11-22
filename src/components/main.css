@@ -219,6 +219,10 @@ input[type='radio']:checked ~ .q-option{
 .start{
     margin-bottom: 2rem;
 }
+.border{
+    border-bottom: 1px solid rgba(221, 221, 221, 0.08);
+    margin-top: 5px;
+}
 
 /* -------------------resultTable.js style --------------------- */
 
