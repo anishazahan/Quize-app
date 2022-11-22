@@ -8,7 +8,7 @@ import { PushAnswer } from '../hooks/setResult'
 
 const Quiz = () => {
 
-  const [check,setChecked] = useState([]);
+  const [check,setChecked] = useState(undefined);
 
  const state = useSelector(state => state )
  const { queue,trace} = useSelector(state => state.questions )
@@ -23,10 +23,10 @@ const Quiz = () => {
   function onNext (){
     console.log("next")
     //----update the trace value by one using MoveNextAction--------
-    // if(trace < queue.length){
-    //   dispatch(MoveNextQuestion());
-    //   // dispatch(PushAnswer(check));
-    // }
+    if(trace < queue.length){
+      dispatch(MoveNextQuestion());
+      dispatch(PushAnswer(check));
+    }
     
   }
   function onPrev (){

@@ -19,7 +19,7 @@ const data = [
     },
     {
             id:3,
-            question:"When an operator value is NULL,the type of return by the ",
+            question:"When an operator value is NULL,the type of return by the array operator is- ",
             options : [
                 'Boolean',
                 'undefined',
