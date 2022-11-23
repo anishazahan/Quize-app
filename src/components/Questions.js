@@ -14,7 +14,7 @@ const Questions = ({onChecked}) => {
     const [checked,setChecked] = useState(undefined)
     
    const [{isloading, apiData, serverError},setgetData]= useFetchQuestion()
-
+    // useSelector(state=>console.log(state))
    
    
     const questions = useSelector(state => state.questions.queue[state.questions.trace] )
