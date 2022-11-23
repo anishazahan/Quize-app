@@ -39,23 +39,23 @@ const Result = () => {
     </div>
     <div className="flex border">
       <span>Total Quiz Point :</span>
-      <span className='bold'>50</span>
+      <span className='bold'>{totalPoints || 0 }</span>
     </div>
     <div className="flex border">
       <span>Total Questions :</span>
-      <span className='bold'>05</span>
+      <span className='bold'>{queue.length || 0 }</span>
     </div>
     <div className="flex border">
       <span>Total Attempts :</span>
-      <span className='bold'>03</span>
+      <span className='bold'>{attempts || 0}</span>
     </div>
     <div className="flex border">
       <span>Total Earn points :</span>
-      <span className='bold'>30</span>
+      <span className='bold'>{earnPoints || 0 }</span>
     </div>
     <div className="flex">
       <span>Quiz Result :</span>
-      <span style={{color : `${flag ? "green" : "red" }`}} className='bold'>{ flag ? "Passed" : "Failed"}</span>
+      <h4 style={{color : `${flag ? "yellow" : "red" }`}} className='bold'>{ flag ? "Passed" : "Failed"}</h4>
     </div>
     </div>
 
