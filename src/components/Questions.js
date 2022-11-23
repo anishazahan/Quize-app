@@ -5,9 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 //........custom hook.........
 import { useFetchQuestion } from '../hooks/fetchQuestion'
 import { updateResult } from '../hooks/setResult'
-
-
-
+// import { updateResultAction } from '../Redux/resultReducer'
 
 
 
@@ -59,7 +57,7 @@ if(serverError)return <h3 className='loading'>{serverError ||"unknown error"}</h
                         
                         />
                         <label className='q-option' htmlFor={`q${i}.options`}>{q}</label>
-                        <div className={`check ${result[true] == i ? 'checked' : ''}`}></div>
+                        <div className={`check ${result[trace] == i ? 'checked' : ''}`}></div>
                   </li>
                 })
             }
