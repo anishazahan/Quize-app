@@ -5,6 +5,7 @@ import ResultTable from './ResultTable'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetResultAction } from '../Redux/resultReducer'
 import { resetAllAction } from '../Redux/question_reducer'
+import { attemps_number, earn_points } from '../helper/Helper'
 
 //------import action----
 
@@ -15,12 +16,13 @@ const Result = () => {
   const {questions : {queue ,answer}, result : {result , userId}} = useSelector(state => state)
 
   useEffect(()=>{
-    console.log(result);
+    console.log(earnPoints);
   },[])
 
 
    const totalPoints = queue .length * 10;
-  //  const attempts = 
+   const attempts =  attemps_number(result);
+   const earnPoints = earn_points (result,answer);
 
   function onRestart (){
     dispatch(resetAllAction())

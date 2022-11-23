@@ -33,6 +33,7 @@ const Quiz = () => {
      }
     }
     //--------reset the value of the checked variable--
+    setChecked(undefined)
     
   }
   function onPrev (){
