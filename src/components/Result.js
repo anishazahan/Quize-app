@@ -5,7 +5,7 @@ import ResultTable from './ResultTable'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetResultAction } from '../Redux/resultReducer'
 import { resetAllAction } from '../Redux/question_reducer'
-import { attemps_number, earn_points } from '../helper/Helper'
+import { attemps_number, earn_points,flagResult  } from '../helper/Helper'
 
 //------import action----
 
@@ -22,7 +22,8 @@ const Result = () => {
 
    const totalPoints = queue .length * 10;
    const attempts =  attemps_number(result);
-   const earnPoints = earn_points (result,answer);
+   const earnPoints = earn_points (result,answer,10);
+   const flag = flagResult (totalPoints,earnPoints)
 
   function onRestart (){
     dispatch(resetAllAction())
