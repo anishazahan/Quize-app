@@ -16,7 +16,7 @@ const Result = () => {
   const {questions : {queue ,answer}, result : {result , userId}} = useSelector(state => state)
 
   useEffect(()=>{
-    console.log(earnPoints);
+    console.log(flag);
   },[])
 
 
@@ -55,7 +55,7 @@ const Result = () => {
     </div>
     <div className="flex">
       <span>Quiz Result :</span>
-      <span className='bold'>Passed</span>
+      <span className='bold'>{ flag ? "Passed" : "Failed"}</span>
     </div>
     </div>
 
