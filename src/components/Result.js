@@ -14,7 +14,7 @@ import { usePublishedResult } from '../hooks/setResult'
 const Result = () => {
  
    const dispatch =  useDispatch();
-  const {questions : {queue ,answer}, result : {result , userId}} = useSelector(state => state)
+  const {questions : {queue ,answers}, result : {result , userId}} = useSelector(state => state)
 
   // useEffect(()=>{
   //   console.log(flag);
@@ -23,7 +23,7 @@ const Result = () => {
 
    const totalPoints = queue .length * 10;
    const attempts =  attemps_number(result);
-   const earnPoints = earn_points (result,answer,10);
+   const earnPoints = earn_points (result,answers,10);
    const flag = flagResult (totalPoints,earnPoints)
 
   //--------store user result------

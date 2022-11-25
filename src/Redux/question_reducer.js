@@ -6,16 +6,16 @@ export  const questionReducer = createSlice({
     name : "questions",
     initialState : {
         queue :[],
-        answer :[],
+        answers :[],
         trace :0
     },
     reducers :{
         startExamAction :(state , action)=>{
-            let {question,answer} = action.payload
+            let {question,answers} = action.payload
      return{
             ...state,
             queue : question,
-            answer 
+            answers 
 
         }
         },
@@ -36,7 +36,7 @@ export  const questionReducer = createSlice({
         resetAllAction : ()=>{
             return{
                 queue :[],
-                answer :[],
+                answers :[],
                 trace :0
             }
         }

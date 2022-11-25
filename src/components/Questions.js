@@ -37,7 +37,7 @@ const Questions = ({onChecked}) => {
     }
 
 if(isloading)return <h3 className='loading'>Loading</h3>
-if(serverError)return <h3 className='loading'>{serverError ||"unknown error"}</h3>
+if(serverError)return <h3 className='loading'>{serverError.message ||"unknown error"}</h3>
 
 
 
