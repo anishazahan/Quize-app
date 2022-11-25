@@ -8,7 +8,9 @@ export function attemps_number (result){
 }
 
 export function earn_points(result,answer,point){
-        return result.map((element,i)=> answer[i]=== element).filter(i=> i).map(i=>point).reduce((prev,current)=> prev + current,0 )
+    console.log(result);
+        return  result.map((element,i)=> answer[i]=== element).filter(i=> i).map(i=>point).reduce((prev,current)=> prev + current ,0 )
+
 }
 
 // .filter(i => i).map(i=>point).reduce((prev,curr)=>prev + current , 0);
@@ -24,14 +26,14 @@ export function CheckUserExist({children}){
     return auth ? children : <Navigate to='/' replace={true}></Navigate>
 }
 
-///-----get server data---------
+// ///-----get server data---------
 
 export async function getServerData(url,callback){
   const data = await (await axios.get(url))?.data;
  return callback ? callback(data) : data;
 }
 
-///-----post server data---------
+// ///-----post server data---------
 
 export async function postServerData(url,result,callback){
     const data = await (await axios.post(url,result))?.data;

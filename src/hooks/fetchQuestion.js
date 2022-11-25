@@ -1,5 +1,5 @@
 
-import data ,{answer} from "../database/data";
+// import data ,{answer} from "../database/data";
 
 //------ redux actions..............
 import * as Action from "../Redux/question_reducer"
@@ -9,6 +9,7 @@ import * as Action from "../Redux/question_reducer"
 
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
+import { getServerData } from "../helper/Helper";
 
 export const useFetchQuestion = () => {
     const dispatch = useDispatch();
@@ -20,13 +21,22 @@ export const useFetchQuestion = () => {
       (async ()=>{
         try{
 
-            let question = await data;
-            if(question.length> 0){
+            // let question = await data;
+
+          const [{questions,answers}] =  await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`,(data)=>data);
+          console.log({questions,answers})
+
+        //   const q = await getServerData('http://localhost:5000/api/questions',(data)=>data)
+        //   const [{answers,questions}] = q
+        //   console.log({answers,questions})
+
+
+            if(questions.length> 0){
                 setgetData(prev => ({...prev,isloading:false}));
-                setgetData(prev => ({...prev,apiData : {question,answer}}));
+                setgetData(prev => ({...prev,apiData : questions}));
 
                 //----dispatch an action-------
-                dispatch(Action.startExamAction( {question,answer}))
+                dispatch(Action.startExamAction( {question : questions,answers}))
 
             }else{
                 throw new Error ("No question available")

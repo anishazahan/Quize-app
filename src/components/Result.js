@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetResultAction } from '../Redux/resultReducer'
 import { resetAllAction } from '../Redux/question_reducer'
 import { attemps_number, earn_points,flagResult  } from '../helper/Helper'
+import { usePublishedResult } from '../hooks/setResult'
 
 //------import action----
 
@@ -15,15 +16,25 @@ const Result = () => {
    const dispatch =  useDispatch();
   const {questions : {queue ,answer}, result : {result , userId}} = useSelector(state => state)
 
-  useEffect(()=>{
-    console.log(flag);
-  },[])
+  // useEffect(()=>{
+  //   console.log(flag);
+  // },[])
 
 
    const totalPoints = queue .length * 10;
    const attempts =  attemps_number(result);
    const earnPoints = earn_points (result,answer,10);
    const flag = flagResult (totalPoints,earnPoints)
+
+  //--------store user result------
+  usePublishedResult({
+     result,
+     username : userId,
+     attempts,
+     points :earnPoints,
+     achived : flag ? "Passed" : "Failed"} )
+
+  //  console.log(earnPoints);
 
   function onRestart (){
     dispatch(resetAllAction())
