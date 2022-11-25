@@ -46,7 +46,7 @@ const Result = () => {
     <div className="result flex-center">
     <div className="flex border">
       <span>Username</span>
-      <span className='bold'>Daily tution</span>
+      <span className='bold'>{userId}</span>
     </div>
     <div className="flex border">
       <span>Total Quiz Point :</span>

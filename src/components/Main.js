@@ -25,7 +25,7 @@ const Main = () => {
         <li>The result will be declared at the end of the quiz.</li>
       </ol>
       <form id='form'>
-        <input className='userid' ref={inputRef} type="text" placeholder='username*' />
+        <input className='userid' ref={inputRef} type="text" placeholder='please enter your username*' required />
       </form>
       <div className="start">
         <Link className='btn' to={'quiz'} onClick={startQuz}  >Start Quiz</Link>

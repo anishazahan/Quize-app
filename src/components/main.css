@@ -48,22 +48,26 @@ body{
     padding: 15px 0;
     background-color: black;
     border: 1px solid var(--primary-color);
+    margin: auto;
 
 }
 .container ol{
-    padding: 3rem 0 1rem 1.5rem;
+    padding: 3rem 0 0 1.5rem;
+   
 
 }
 .container ol li{
-    font-size: 1.1em;
+    font-size: 17px;
     color: #cecece;
+    margin: 0 1rem;
+   
     
 }
 
 .start{
     display: flex;
     justify-content: center;
-    padding-top: 2em;
+    padding-top: 1.5em;
 
 }
 
@@ -96,7 +100,9 @@ body{
 }
 
 input::placeholder{
-    color: black;
+    color: rgba(0, 0, 0, 0.806);
+    font-size: 14px;
+    font-weight: 500;
 }
 
 
@@ -105,6 +111,8 @@ input::placeholder{
 .grid{
     display: flex;
     justify-content: space-between;
+    width: 60%;
+    margin-left: 1rem;
     
 }
 
@@ -135,14 +143,17 @@ input::placeholder{
 
 .questions{
     margin: 2rem 0 4rem 1.5rem;
+    width: 90%;
 }
 .q-list{
     list-style: none;
+    cursor: pointer;
 }
 .q-list li{
     margin-left: 1rem;
     margin-top: 1rem;
     position: relative;
+   
 }
 .q-list li::after{
     position: absolute;
@@ -160,6 +171,10 @@ input::placeholder{
 .q-option{
     color: var(--light-color);
     padding: 1rem .5rem;
+    cursor: pointer;
+}
+input[type='radio']{
+    cursor: pointer;
 }
 input[type='radio']:after {
     width: 12px;
@@ -225,7 +240,9 @@ input[type='radio']:checked ~ .q-option{
 }
 
 /* -------------------resultTable.js style --------------------- */
-
+.result-Table{
+    margin: 1rem;
+}
 
 table{
     border: 1px solid var(--primary-color);
@@ -273,6 +290,7 @@ table{
     }
     .container ol{
         margin: 0 1rem;
+        margin: auto;
     }
 
 }
