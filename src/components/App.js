@@ -1,5 +1,5 @@
 
-import '../styles/App.css';
+
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 
 ////////------------import component-----------------
@@ -29,6 +29,7 @@ import { CheckUserExist } from '../helper/Helper';
 function App() {
   return (
     <>
+    
       <RouterProvider router={router}/>
     </>
   );

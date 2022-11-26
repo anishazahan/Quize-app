@@ -15,7 +15,7 @@ export const useFetchQuestion = () => {
     const dispatch = useDispatch();
    const [getData,setgetData]=  useState({isloading : false , apiData : [], serverError :null});
    useEffect(()=>{
-    setgetData(prev => ({...prev,isloading:true}));
+    setgetData(prev => ({...prev, isloading:true}));
 
     //----async func fetch backend data--------
       (async ()=>{
@@ -24,7 +24,8 @@ export const useFetchQuestion = () => {
             // let question = await data;
 
           const [{questions,answers}] =  await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`,(data)=>data);
-          console.log({questions,answers})
+
+        //   console.log({questions,answers})
 
         //   const q = await getServerData('http://localhost:5000/api/questions',(data)=>data)
         //   const [{answers,questions}] = q
