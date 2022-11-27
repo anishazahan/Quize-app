@@ -29,13 +29,27 @@ export function CheckUserExist({children}){
 // ///-----get server data---------
 
 export async function getServerData(url,callback){
-  const data = await (await axios.get(url))?.data;
+  const data = await (await axios.get(url,
+    {
+        headers :{
+            "Access-Control-Allow-Origin": "*",
+        }
+    }
+    
+    ))?.data;
  return callback ? callback(data) : data;
 }
 
 // ///-----post server data---------
 
 export async function postServerData(url,result,callback){
-    const data = await (await axios.post(url,result))?.data;
+    const data = await (await axios.post(url,result,
+    {
+        headers :{
+            "Access-Control-Allow-Origin": "*",
+        }
+    })
+    )?.data;
    return callback ? callback(data) : data;
   }
+
