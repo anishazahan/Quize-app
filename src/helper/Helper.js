@@ -33,6 +33,7 @@ export async function getServerData(url,callback){
     {
         headers :{
             "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Method": "GET"
         }
     }
     
@@ -47,6 +48,7 @@ export async function postServerData(url,result,callback){
     {
         headers :{
             "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin-Method": "POST"
         }
     })
     )?.data;
